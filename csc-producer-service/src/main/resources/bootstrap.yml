@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: csc-producer-service
+endpoints:
+  actuator:
+    enabled: true
+    
