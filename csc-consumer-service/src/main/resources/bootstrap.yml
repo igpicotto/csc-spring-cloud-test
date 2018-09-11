@@ -1,3 +1,7 @@
 spring:
   application:
     name: csc-consumer-service
+
+management: 
+  security: 
+    enabled: false        
