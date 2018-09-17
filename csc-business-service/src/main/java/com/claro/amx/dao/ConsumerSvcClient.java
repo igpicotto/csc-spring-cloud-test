@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface ConsumerSvcClient {
 
 	
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value="/", method = RequestMethod.GET)
 	public Map<String, String> message();
 	
 	

@@ -11,20 +11,25 @@ import com.claro.amx.dao.ConsumerSvcClient;
 
 @RestController
 public class ServiceImpl {
-
+	
+	@Autowired
 	ConsumerSvcClient consumerSvcClient;
 	
 	@RequestMapping(value = "/prueba", method = RequestMethod.GET)
 	public Map<String, String> getPrueba() {
 		
-		return consumerSvcClient.message();
+		Map<String, String> mapa = consumerSvcClient.message();
+		
+		mapa.put("business-message", "Mensaje de la capa Business.");
+		
+		return mapa;
 		
 	}
 
-	@Autowired
-	public void setConsumerSvcClient(ConsumerSvcClient consumerSvcClient) {
-		this.consumerSvcClient = consumerSvcClient;
-	}
+//	@Autowired
+//	public void setConsumerSvcClient(ConsumerSvcClient consumerSvcClient) {
+//		this.consumerSvcClient = consumerSvcClient;
+//	}
 	
 	
 }

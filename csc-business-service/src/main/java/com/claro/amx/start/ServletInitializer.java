@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"com.claro.amx"})
 @ComponentScan("com.claro.amx")
 public class ServletInitializer {
     public static void main(String[] args) {
