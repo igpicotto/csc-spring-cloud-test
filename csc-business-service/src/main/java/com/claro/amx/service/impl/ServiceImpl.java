@@ -26,10 +26,5 @@ public class ServiceImpl {
 		
 	}
 
-//	@Autowired
-//	public void setConsumerSvcClient(ConsumerSvcClient consumerSvcClient) {
-//		this.consumerSvcClient = consumerSvcClient;
-//	}
-	
 	
 }
