@@ -2,6 +2,8 @@ package com.claro.amx.service.impl;
 
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +16,8 @@ import com.claro.amx.dao.ConsumerSvcClient;
 @Component
 public class ServiceImpl {
 	
+	private static Logger LOG = LoggerFactory.getLogger(ServiceImpl.class);
+	
 	@Autowired
 	ConsumerSvcClient consumerSvcClient;
 	@Autowired
@@ -22,6 +26,7 @@ public class ServiceImpl {
 	@RequestMapping(value = "/prueba", method = RequestMethod.GET)
 	public Map<String, String> getPrueba() {
 		
+		LOG.info("Dentro de csc-business-service.");
 		
 		Map<String, String> mapa = cliente.getConsumerResult();
 		

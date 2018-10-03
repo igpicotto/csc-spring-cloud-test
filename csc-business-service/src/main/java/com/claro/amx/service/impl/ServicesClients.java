@@ -18,6 +18,7 @@ public class ServicesClients {
 	@HystrixCommand(fallbackMethod = "getConsumerResultDefault")
 	public Map<String, String> getConsumerResult() {
 		
+		// TODO: Ver de hacer esto en otro Hilo
 		Map<String, String> mapa = consumerSvcClient.message();
 		
 		mapa.put("business-message-ok", "Mensaje de la capa Business desde el SVC.");
