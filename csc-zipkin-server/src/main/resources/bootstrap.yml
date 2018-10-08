@@ -1,3 +1,7 @@
 spring:
   application:
     name: csc-zipkin-server
+  zipkin:
+    sender:
+      type: web
+      
