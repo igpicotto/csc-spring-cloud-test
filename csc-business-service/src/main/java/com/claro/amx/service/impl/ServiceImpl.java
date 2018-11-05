@@ -31,9 +31,15 @@ public class ServiceImpl {
 		
 		LOG.info("Dentro de csc-business-service.");
 		
+		// Invoco al servicio CSC-CONSUMER-SERVICE
 		Map<String, String> mapa = cliente.getConsumerResult();
 		
 		mapa.put("business-message", "Mensaje de la capa Business.");
+		
+		// Invoco al servicio CSC-PRODUCER-SERVICE
+		Map<String, String> mapaProducer = cliente.getProducerResult();
+		
+		mapa.put("message-producer", mapaProducer.get("message"));
 		
 		return mapa;
 		
